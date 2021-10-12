@@ -157,9 +157,9 @@
 //                                   |  GUI   |         |   ALT   |    |       |         |  F10    |
 //                                   '--------+---------+---------'    '-------+---------+---------'
                         bindings = <
-          &none     &none   &none    &none     &none    &none           &none      &kp RS(RA(U))   &kp RS(RA(UARW))   &kp RS(RA(I))   &none   &kp LG(LS(F4))
-          &kp LCTL  &none   &none    &none     &none    &none           &none      &kp RS(RA(D))   &kp RS(RA(F))      &kp RS(RA(D))   &none   &kp CLCK
-          &kp LSFT  &none   &none    &none     &none    &none           &none      &kp RS(RA(J))   &kp RS(RA(DARW))   &kp RS(RA(K))   &none   &none
+          &none     &none   &none    &none     &none    &none           &none      &kp RC(RA(U))   &kp RC(RA(UARW))   &kp RC(RA(I))   &none   &kp LG(LS(N4))
+          &kp LCTL  &none   &none    &none     &none    &none           &none      &kp RC(RA(D))   &kp RC(RA(F))      &kp RC(RA(D))   &none   &kp CLCK
+          &kp LSFT  &none   &none    &none     &none    &none           &none      &kp RC(RA(J))   &kp RC(RA(DARW))   &kp RC(RA(K))   &none   &none
                                      &kp LGUI  &none    &kp LALT        &none      &none           &none
                         >;
                 };
