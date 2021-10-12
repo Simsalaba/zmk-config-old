@@ -17,6 +17,7 @@
 #define NAVI    3
 #define ADJS    4
 #define FUNC    5
+#define WIN     6
 
 / {
         keymap {
@@ -34,7 +35,7 @@
 //                                   |  GUI   |   RSE   |   SPC   |       |  ENT  |   LWR   |  LALT   |
 //                                   '--------+---------+---------'       '-------+---------+---------'
                   bindings = <
-        &kp ESC        &kp Q    &kp W    &lt NAVI E  &kp R     &kp T           &kp Y    &kp U      &kp I     &kp O     &kp P     &kp BKSP
+        &kp ESC        &kp Q    &kp W    &lt NAVI E  &lt WIN R     &kp T           &kp Y    &kp U      &kp I     &kp O     &kp P     &kp BKSP
         &mt LCTL TAB   &kp A    &kp S    &kp D    &lt FUNC F   &kp G           &kp H    &kp J      &kp K     &kp L     &kp SCLN  &kp QUOT
         &kp LSFT       &kp Z    &kp X    &kp C    &kp V        &kp B           &kp N    &kp M      &kp DOT   &kp CMMA  &kp LBKT  &kp RALT
                                        &kp LGUI  &mo LOWER     &mt LSFT SPC    &mt ADJS RET  &mo RAISE  &kp LALT
@@ -67,17 +68,17 @@
                 raise_layer {
 // RAISE Layer: Special Chars
 // .--------------------------------------------------------------.    .-----------------------------------------------------------.
-// |       &      |   *     |    @   |   {    |    }    |    |    |    |   +   |   -     |    €    |         |          |   DEL    |
+// |       &      |   *     |    @   |   {    |    }    |    |    |    |   +   |    -    |    €    |         |          |   DEL    |
 // |--------------+---------+--------+--------+---------+---------|    |-------+---------+---------+---------+----------+----------|
-// |       #      |        |    $   |   (    |    )    |    `    |     |   ?   |    _    |    /    |         |          |     '     |
+// |       #      |         |    $   |   (    |    )    |    `    |    |   ?   |    _    |    /    |         |          |     '    |
 // |--------------+---------+--------+--------+---------+---------|    |-------+---------+---------+---------+----------+----------|
-// |       %      |        |    ^   |   [    |    ]    |    ~    |     |   !   |    =    |    ,    |         |          |          |
+// |       %      |         |    ^   |   [    |    ]    |    ~    |    |   !   |    =    |    ,    |         |          |          |
 // '---------------------------------+--------+---------+---------+    |-------+---------+---------+-------------------------------'
 //                                   |        |         |         |    |       |         |         |
 //                                   '--------+---------+---------'    '-------+---------+---------'
                         bindings = <
         &kp RS(N6) &kp RS(BSLH)   &kp RA(N2)    &kp RS(RA(N8))  &kp RS(RA(N9))  &kp RA(N7)  &kp MINUS     &kp RS(FSLH)  &none  &none  &none  &kp DEL
-        &kp RS(N3) &none   &kp RA(N4)    &kp RS(N8)      &kp RS(N9)  &kp RS(EQUAL)          &kp RS(MINUS)     &kp FSLH      &kp FSLH   &none  &none  &kp BSLH
+        &kp RS(N3) &none   &kp RA(N4)    &kp RS(N8)      &kp RS(N9)  &kp RS(EQUAL)          &kp RS(MINUS)     &kp FSLH   &kp RS(N7)   &none  &none  &kp BSLH
         &kp RS(N5) &none   &kp RS(RBKT) &kp RA(N8)      &kp RA(N9)  &kp RA(RBKT)            &kp RS(N1)    &kp RS(N0)     &kp COMMA  &none  &none  &none
                                       &trans    &mo ADJS  &trans                            &trans        &trans     &trans
                         >;
@@ -96,7 +97,7 @@
 //                                   |  GUI   |         |   ALT   |    |       |         |         |
 //                                   '--------+---------+---------'    '-------+---------+---------'
                         bindings = <
-          &none     &none   &none    &none     &none    &none           &none      &kp PG_DN  &kp UARW   &kp PG_UP   &none  &kp GUI(LS(F4))
+          &none     &none   &none    &none     &none    &none           &none      &kp PG_DN  &kp UARW   &kp PG_UP   &none  &kp LG(LS(F4))
           &kp LCTL  &none   &none    &none     &none    &none           &none      &kp LARW   &kp DARW   &kp RARW  &none  &kp CLCK
           &kp LSFT  &none   &none    &none     &none    &none           &none      &kp HOME   &none      &kp END     &none  &trans
                                      &kp LGUI  &none    &kp LALT        &none      &none      &none
@@ -137,7 +138,26 @@
 //                                   |  GUI   |         |   ALT   |    |       |         |  F10    |
 //                                   '--------+---------+---------'    '-------+---------+---------'
                         bindings = <
-          &none     &none   &none    &none     &none    &none           &none      &kp F7   &kp F8   &kp F9   &kp F12   &kp PSCRN
+          &none     &none   &none    &none     &none    &none           &none      &kp F7   &kp F8   &kp F9   &kp F12   &kp LG(LS(F4))
+          &kp LCTL  &none   &none    &none     &none    &none           &none      &kp F6   &kp F5   &kp F4   &kp F11   &kp CLCK
+          &kp LSFT  &none   &none    &none     &none    &none           &none      &kp F3   &kp F2   &kp F1   &kp F12   &none
+                                     &kp LGUI  &none    &kp LALT        &none      &none    &kp F10
+                        >;
+                };
+                
+                              win_layer {
+// Window Layer: Windows
+// .--------------------------------------------------------------.    .-----------------------------------------------------------.
+// |              |         |        |        |         |         |    |       |  UL     |  UM     |  UR     |  F12     |  PrtScn  |
+// |--------------+---------+--------+--------+---------+---------|    |-------+---------+---------+---------+----------+----------|
+// |     CTRL     |         |        |        |         |         |    |       |  ML     |  MM     |  MR     |  F11     | CAPS LCK |
+// |--------------+---------+--------+--------+---------+---------|    |-------+---------+---------+---------+----------+----------|
+// |     SHIFT    |         |        |        |         |         |    |       |  BL     |  ML     |  MR     |          |          |
+// '---------------------------------+--------+---------+---------+    |-------+---------+---------+-------------------------------'
+//                                   |  GUI   |         |   ALT   |    |       |         |  F10    |
+//                                   '--------+---------+---------'    '-------+---------+---------'
+                        bindings = <
+          &none     &none   &none    &none     &none    &none           &none      &kp F7   &kp F8   &kp F9   &kp F12   &kp LG(LS(F4))
           &kp LCTL  &none   &none    &none     &none    &none           &none      &kp F6   &kp F5   &kp F4   &kp F11   &kp CLCK
           &kp LSFT  &none   &none    &none     &none    &none           &none      &kp F3   &kp F2   &kp F1   &kp F12   &none
                                      &kp LGUI  &none    &kp LALT        &none      &none    &kp F10
