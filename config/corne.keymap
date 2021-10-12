@@ -26,7 +26,7 @@
                 default_layer { 
 // DEFAULT LAYER
 // .--------------------------------------------------------------.       .-----------------------------------------------------------.
-// |   ESC        |    Q    |    W   |  E/NAV |    R    |    T    |       |   Y   |    U    |    I    |    O    |     P    |   BKSP   |
+// |   ESC        |    Q    |    W   |  E/NAV | R/WIN   |    T    |       |   Y   |    U    |    I    |    O    |     P    |   BKSP   |
 // |--------------+---------+--------+--------+---------+---------|       |-------+---------+---------+---------+----------+----------|
 // |   CTRL/Tab   |    A    |    S   |   D    | F/FUNC  |    G    |       |   H   |    J    |    K    |    L    |     Ö    |     Ä    |
 // |--------------+---------+--------+--------+---------+---------|       |-------+---------+---------+---------+----------+----------|
@@ -70,16 +70,16 @@
 // .--------------------------------------------------------------.    .-----------------------------------------------------------.
 // |       &      |   *     |    @   |   {    |    }    |    |    |    |   +   |    -    |    €    |         |          |   DEL    |
 // |--------------+---------+--------+--------+---------+---------|    |-------+---------+---------+---------+----------+----------|
-// |       #      |         |    $   |   (    |    )    |    `    |    |   ?   |    _    |    /    |         |          |     '    |
+// |       #      |         |    $   |   (    |    )    |    `    |    |   !   |    _    |    /    |         |          |     '    |
 // |--------------+---------+--------+--------+---------+---------|    |-------+---------+---------+---------+----------+----------|
-// |       %      |         |    ^   |   [    |    ]    |    ~    |    |   !   |    =    |    ,    |         |          |          |
+// |       %      |         |    ^   |   [    |    ]    |    ~    |    |   ?   |    =    |    ,    |         |          |          |
 // '---------------------------------+--------+---------+---------+    |-------+---------+---------+-------------------------------'
 //                                   |        |         |         |    |       |         |         |
 //                                   '--------+---------+---------'    '-------+---------+---------'
                         bindings = <
         &kp RS(N6) &kp RS(BSLH)   &kp RA(N2)    &kp RS(RA(N8))  &kp RS(RA(N9))  &kp RA(N7)  &kp MINUS     &kp RS(FSLH)  &none  &none  &none  &kp DEL
-        &kp RS(N3) &none   &kp RA(N4)    &kp RS(N8)      &kp RS(N9)  &kp RS(EQUAL)          &kp RS(MINUS)     &kp FSLH   &kp RS(N7)   &none  &none  &kp BSLH
-        &kp RS(N5) &none   &kp RS(RBKT) &kp RA(N8)      &kp RA(N9)  &kp RA(RBKT)            &kp RS(N1)    &kp RS(N0)     &kp COMMA  &none  &none  &none
+        &kp RS(N3) &none   &kp RA(N4)    &kp RS(N8)      &kp RS(N9)  &kp RS(EQUAL)          &kp RS(N1)     &kp FSLH   &kp RS(N7)   &none  &none  &kp BSLH
+        &kp RS(N5) &none   &kp RS(RBKT) &kp RA(N8)      &kp RA(N9)  &kp RA(RBKT)            &kp RS(MINUS)    &kp RS(N0)     &kp COMMA  &none  &none  &none
                                       &trans    &mo ADJS  &trans                            &trans        &trans     &trans
                         >;
                 };
@@ -157,10 +157,10 @@
 //                                   |  GUI   |         |   ALT   |    |       |         |  F10    |
 //                                   '--------+---------+---------'    '-------+---------+---------'
                         bindings = <
-          &none     &none   &none    &none     &none    &none           &none      &kp F7   &kp F8   &kp F9   &kp F12   &kp LG(LS(F4))
-          &kp LCTL  &none   &none    &none     &none    &none           &none      &kp F6   &kp F5   &kp F4   &kp F11   &kp CLCK
-          &kp LSFT  &none   &none    &none     &none    &none           &none      &kp F3   &kp F2   &kp F1   &kp F12   &none
-                                     &kp LGUI  &none    &kp LALT        &none      &none    &kp F10
+          &none     &none   &none    &none     &none    &none           &none      &kp RS(RA(U))   &kp RS(RA(UARW))   &kp RS(RA(I))   &none   &kp LG(LS(F4))
+          &kp LCTL  &none   &none    &none     &none    &none           &none      &kp RS(RA(D))   &kp RS(RA(F))      &kp RS(RA(D))   &none   &kp CLCK
+          &kp LSFT  &none   &none    &none     &none    &none           &none      &kp RS(RA(J))   &kp RS(RA(DARW))   &kp RS(RA(K))   &none   &none
+                                     &kp LGUI  &none    &kp LALT        &none      &none           &none
                         >;
                 };
 
