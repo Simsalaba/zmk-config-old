@@ -77,7 +77,7 @@
 //                                   '--------+---------+---------'    '-------+---------+---------'
                         bindings = <
         &kp RS(N6) &kp RS(BSLH)   &kp RA(N2)    &kp RS(RA(N8))  &kp RS(RA(N9))  &kp RA(N7)  &kp MINUS     &kp RS(FSLH)  &none  &none  &none  &kp DEL
-        &kp RS(N3) &none   &kp RA(N4)    &kp RS(N8)      &kp RS(N9)  &kp RS(EQUAL)          &kp RS(MINUS)     &kp FSLH      &kp FSLH   &none  &none  &kp SINGLE_QUOTE
+        &kp RS(N3) &none   &kp RA(N4)    &kp RS(N8)      &kp RS(N9)  &kp RS(EQUAL)          &kp RS(MINUS)     &kp FSLH      &kp FSLH   &none  &none  &kp BSLH
         &kp RS(N5) &none   &kp RS(RBKT) &kp RA(N8)      &kp RA(N9)  &kp RA(RBKT)            &kp RS(N1)    &kp RS(N0)     &kp COMMA  &none  &none  &none
                                       &trans    &mo ADJS  &trans                            &trans        &trans     &trans
                         >;
@@ -96,7 +96,7 @@
 //                                   |  GUI   |         |   ALT   |    |       |         |         |
 //                                   '--------+---------+---------'    '-------+---------+---------'
                         bindings = <
-          &none     &none   &none    &none     &none    &none           &none      &kp PG_DN  &kp UARW   &kp PG_UP   &none  &kp PSCRN
+          &none     &none   &none    &none     &none    &none           &none      &kp PG_DN  &kp UARW   &kp PG_UP   &none  &kp GUI(LS(F4))
           &kp LCTL  &none   &none    &none     &none    &none           &none      &kp LARW   &kp DARW   &kp RARW  &none  &kp CLCK
           &kp LSFT  &none   &none    &none     &none    &none           &none      &kp HOME   &none      &kp END     &none  &trans
                                      &kp LGUI  &none    &kp LALT        &none      &none      &none
